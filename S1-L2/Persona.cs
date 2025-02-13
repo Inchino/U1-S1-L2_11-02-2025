@@ -26,9 +26,24 @@ namespace Esercizio2
             set => _eta = value >= 0 ? value : 0;
         }
 
-        public void Saluti()
+        public void GetNome()
         {
-            Console.WriteLine($"Salve, mi chiamo {Nome} {Cognome} ed ho {Eta} anni!");
+            Console.WriteLine("Inserire il nome della persona: ");
+            _nome = Console.ReadLine();
+        }
+        public void GetCognome()
+        {
+            Console.WriteLine("Inserire il cognome della persona: ");
+            _cognome = Console.ReadLine();
+        }
+        public void GetEta()
+        {
+            Console.WriteLine("Inserire l'età della persona: ");
+            _eta = int.Parse(Console.ReadLine());
+        }
+        public void GetDettagli()
+        {
+            Console.WriteLine($"\n---------------------------------------------\n\nI dettagli della persona sono: \n - Nome: {Nome} \n - Cognome: {Cognome} \n - Età: {Eta} \n");
         }
     }
 }
